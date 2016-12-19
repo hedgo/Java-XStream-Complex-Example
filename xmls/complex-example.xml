@@ -1,6 +1,8 @@
-<complex-example attribute="some attribute">
+<complex-example attribute="some attribute" defaultAttribute="hej!!">
+		
 	<number-1>1</number-1>
 	<number-3>3</number-3>
+	
 	<transientString>
 		Some transient string that will not be loaded.
 	</transientString>
@@ -10,10 +12,30 @@
 	<data>C</data>
 	<data>D</data>
 	<data>E</data>
-
-	<book>
-		<title>The Lord of The Rings</title>
-		<author>J.R.R. Tolkien</author>
-		<pages-count>1024</pages-count>
-	</book>
+	<data>A</data>
+	<data>B</data>
+	<data>C</data>
+	<data>D</data>
+	<data>Eaaaaaaaaaaaaaaa</data>
+	
+	<books>
+		<book>
+			<title>qqqqqqqqqqThe Lord of The Rings</title>
+			<author>J.R.R. Tolkien</author>
+			<pages-count>1024</pages-count>
+		</book>
+		
+		<book>
+			<title>Conan</title>
+			<author>ssss</author>
+			<pages-count>3</pages-count>
+		</book>	
+		
+		<book>
+			<title>Superman</title>
+			<author>Batman;)</author>
+			<pages-count>10000</pages-count>
+		</book>	
+	</books>
+	
 </complex-example>

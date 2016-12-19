@@ -20,6 +20,8 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
  */
 @XStreamAlias("complex-example")
 public class ComplexExample {
+	
+	
 	@XStreamAlias("number-1")
 	private int number1 = 9;// default value will be replaced if present in the xml
 
@@ -31,7 +33,7 @@ public class ComplexExample {
 
 	@XStreamAlias("attribute")
 	@XStreamAsAttribute
-	private String attribute;
+	private String attribute = "Quake 3 rules";
 
 	@XStreamAlias("default-attribute")
 	@XStreamAsAttribute
@@ -44,23 +46,22 @@ public class ComplexExample {
 	@XStreamImplicit(itemFieldName = "data")
 	private List<String> data;
 
-	@XStreamAlias("book")
-	private Book book; // you can use other classes that were annotated
-						// (just give the top most class to xstream for
-						// annotation processing,
-						// it will find all others that are used)
+	@XStreamAlias("books")
+	private Books books;	
+	
+	//@XStreamImplicit(itemFieldName = "book")
+	//private List<Book> books;
 
-	public ComplexExample() {
-		System.out.println("Very talkative constructor.");
-	}
-
+//	@XStreamAlias("book")
+//	private Book book; 
+	
 	@Override
 	public String toString() {
-		return "ComplexExample [number1=" + number1 + ", number2=" + number2
-				+ ", number3=" + number3 + ", attribute=" + attribute
-				+ ", defaultAttribute=" + defaultAttribute
-				+ ", transientString=" + transientString + ", data=" + data
-				+ ", book=" + book + "]";
+		return "ComplexExample [\nnumber1=" + number1 + "\n, number2=" + number2
+				+ "\n, number3=" + number3 + "\n, attribute=" + attribute
+				+ "\n, defaultAttribute=" + defaultAttribute
+				+ "\n, transientString=" + transientString + "\n, data=" + data
+				+ "\n, books=" + books + "]";
 	}
 
 	/**
